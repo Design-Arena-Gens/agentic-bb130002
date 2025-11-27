@@ -915,3 +915,4 @@ config/database.yml
 *.zip
 
 # ===== END =====
+.env*.local

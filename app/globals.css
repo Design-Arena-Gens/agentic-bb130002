@@ -1,0 +1,135 @@
+:root {
+  --bg: #0b1017;
+  --card: #111826;
+  --muted: #cfd7e6;
+  --primary: #63b3ed;
+  --accent: #f6ad55;
+  --success: #48bb78;
+  --danger: #f56565;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: radial-gradient(1000px 1000px at 80% 0%, #1a2434 0%, var(--bg) 60%);
+  color: white;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 32px 20px 80px;
+}
+
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.02) 100%);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+  backdrop-filter: blur(6px);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: .3px;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn {
+  background: linear-gradient(180deg, #2b6cb0, #2c5282);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: white;
+  font-weight: 700;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform .05s ease, box-shadow .2s ease, opacity .2s ease;
+  box-shadow: 0 8px 20px rgba(45, 112, 179, .35);
+}
+.btn:hover {
+  transform: translateY(-1px);
+}
+.btn:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+.btn.secondary {
+  background: linear-gradient(180deg, #2f855a, #276749);
+  box-shadow: 0 8px 20px rgba(39, 103, 73, .35);
+}
+.btn.danger {
+  background: linear-gradient(180deg, #c53030, #9b2c2c);
+  box-shadow: 0 8px 20px rgba(197, 48, 48, .35);
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+}
+.left, .right {
+  flex: 1;
+}
+
+.canvasBox {
+  background: radial-gradient(800px 800px at 120% -10%, #162033 0%, #0d1421 50%, #0a0f1a 100%);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 420px;
+}
+
+.meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 12px;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.footerNote {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.rangeRow {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.rangeRow input[type="range"] {
+  width: 200px;
+}
